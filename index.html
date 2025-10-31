@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InkTrail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="p-removebg-preview.png" alt="Logo" class="img">
+    <h2 class="logo">InkTrail</h2>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="genres.html">Genres</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+  <div class="content">
+
+    <h1>Uncover Hidden Gems</h1>
+    <p>Read reviews that spark your next obsession.</p>
+
+    <form id="loginForm" class="flex flex-col items-center gap-4 w-full max-w-sm" novalidate>
+      
+      <div class="w-full flex flex-col">
+        <label for="Email" class="text-white mb-1" style="font-size: 20px;">Email</label><br>
+        <input type="text" id="Email" placeholder="your@email.com"
+               class="p-2 rounded text-black w-full text-base" style="font-size: 20px;">
+      </div>
+
+      <div class="w-full flex flex-col">
+        <label for="Password" class="text-white mb-1" style="font-size: 20px;">Password</label><br>
+        <input type="password" id="Password" placeholder="Minimum 8 characters"
+               class="p-2 rounded text-black w-full text-base" style="font-size: 20px;">
+      </div>
+<br>
+      <button type="submit" class="btn mt-3 w-full" style="border: none;">Join In</button>
+    </form>
+
+  </div>
+</div>
+
+<footer>
+  © 2025 InkTrail. All rights reserved.
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById('loginForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const emailInput = document.getElementById('Email'); 
+    const passwordInput = document.getElementById('Password'); 
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+
+    if (!email) {
+      alert("Email is required. Please fill out this field.");
+      emailInput.focus();
+      return false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address (e.g., user@example.com).");
+      emailInput.focus();
+      return false;
+    }
+
+    if (!password) {
+      alert("Password is required. Please fill out this field.");
+      passwordInput.focus();
+      return false;
+    }
+
+    if (password.length < 8) {
+      alert("Your password must be at least 8 characters long for security.");
+      passwordInput.focus();
+      return false;
+    }
+
+   
+    window.location.href = "genres.html";
+  });
+});
+</script>
+
+</body>
+</html>
