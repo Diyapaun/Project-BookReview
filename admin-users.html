@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Users | InkTrail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#e0cfb4] flex flex-col min-h-screen">
+
+  <nav class="navbar">
+        <div class="navbar-left">
+            <img src="p-removebg-preview.png" alt="Logo" class="img">
+            <span class="logo">InkTrail Admin</span>
+        </div>
+        <ul>
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+            <li><a href="admin-books.html">Books</a></li>
+            <li><a href="admin-reviews.html">Reviews</a></li>
+            <li><a href="admin-users.html">Users</a></li>
+            <li><a href="admin-settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+
+  <main class="pt-24 px-8 flex-1">
+    <h1 class="text-3xl font-bold text-[#6b4f3b] mb-6">Manage Users</h1>
+    <table class="w-full bg-white shadow-md rounded">
+      <thead class="bg-[#6b4f3b] text-white">
+        <tr>
+          <th class="py-3 px-4 text-left">User ID</th>
+          <th class="py-3 px-4 text-left">Name</th>
+          <th class="py-3 px-4 text-left">Email</th>
+          <th class="py-3 px-4 text-left">Role</th>
+          <th class="py-3 px-4 text-left">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b hover:bg-[#f2e3cd]">
+          <td class="py-3 px-4">U001</td>
+          <td class="py-3 px-4">Diya Paun</td>
+          <td class="py-3 px-4">diya@example.com</td>
+          <td class="py-3 px-4">Admin</td>
+          <td class="py-3 px-4"><button class="text-red-700">Remove</button></td>
+        </tr>
+        <tr class="border-b hover:bg-[#f2e3cd]">
+          <td class="py-3 px-4">U002</td>
+          <td class="py-3 px-4">Arjun Singh</td>
+          <td class="py-3 px-4">arjun@example.com</td>
+          <td class="py-3 px-4">User</td>
+          <td class="py-3 px-4"><button class="text-red-700">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="bg-[#6b4f3b] text-white text-center py-4 mt-auto">
+    © 2025 InkTrail Admin Panel
+  </footer>
+
+</body>
+</html>
