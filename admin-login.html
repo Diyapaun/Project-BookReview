@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InkTrail Admin Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="p-removebg-preview.png" alt="Logo" class="img">
+    <span class="logo">InkTrail Admin</span>
+  </div>
+  <ul class="navbar-menu">
+    <li><a href="admin-dashboard.html">Dashboard</a></li>
+    <li><a href="admin-books.html">Books</a></li>
+    <li><a href="admin-reviews.html">Reviews</a></li>
+    <li><a href="admin-users.html">Users</a></li>
+    <li><a href="admin-settings.html">Settings</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+  <div class="content">
+
+    <h1>Admin Login</h1>
+    <p>Access your dashboard securely.</p>
+
+    <form id="adminLoginForm" class="flex flex-col items-center gap-4 w-full max-w-sm">
+
+      <div class="w-full flex flex-col">
+        <label for="adminEmail" class="text-white text-lg mb-1" style="font-size: 20px;">Email</label><br>
+        <input type="text" id="adminEmail" placeholder="admin@example.com" 
+               class="p-2 rounded text-black w-full text-base" style="font-size: 20px;">
+      </div>
+
+      <div class="w-full flex flex-col">
+        <label for="adminPassword" class="text-white text-lg mb-1" style="font-size: 20px;">Password</label><br>
+        <input type="password" id="adminPassword" placeholder="Minimum 8 characters" 
+               class="p-2 rounded text-black w-full text-base" style="font-size: 20px;">
+      </div>
+<br>
+      <button type="submit" class="btn mt-3 w-full" style="border: none;">Login</button>
+    </form>
+
+  </div>
+</div>
+
+<footer>
+  © 2025 InkTrail Admin. All rights reserved.
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById('adminLoginForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const emailInput = document.getElementById('adminEmail'); 
+    const passwordInput = document.getElementById('adminPassword'); 
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+
+    if (email === "") {
+      alert("Email is required. Please fill out this field.");
+      emailInput.focus();
+      return false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address (e.g., admin@example.com).");
+      emailInput.focus();
+      return false;
+    }
+
+    if (password === "") {
+      alert("Password is required. Please fill out this field.");
+      passwordInput.focus();
+      return false;
+    }
+
+    if (password.length < 8) {
+      alert("Your password must be at least 8 characters long for security.");
+      passwordInput.focus();
+      return false;
+    }
+
+    // Redirect to admin dashboard after successful validation
+    window.location.href = "admin-dashboard.html";
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - InkTrail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+      <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-[#e0cfb4] min-h-screen">
+
+   <nav class="navbar">
+        <div class="navbar-left">
+            <img src="p-removebg-preview.png" alt="Logo" class="img">
+            <span class="logo">InkTrail Admin</span>
+        </div>
+        <ul>
+            <li><a href="admin-dashboard.html">Dashboard</a></li>
+            <li><a href="admin-books.html">Books</a></li>
+            <li><a href="admin-reviews.html">Reviews</a></li>
+            <li><a href="admin-users.html">Users</a></li>
+            <li><a href="admin-settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+  <main class="pt-24 px-6">
+    <h2 class="text-2xl font-bold text-[#5e5048] mb-6">Dashboard</h2>
+
+    <div class="grid gap-6 md:grid-cols-4 mb-10">
+
+      <div class="bg-white p-4 rounded shadow text-center">
+        <h3 class="font-semibold text-[#6b4f3b] mb-2">Total Books</h3>
+        <p class="text-lg font-bold text-[#5e5048]">20</p>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow text-center">
+        <h3 class="font-semibold text-[#6b4f3b] mb-2">Total Genres</h3>
+        <p class="text-lg font-bold text-[#5e5048]">4</p>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow text-center">
+        <h3 class="font-semibold text-[#6b4f3b] mb-2">Total Users</h3>
+        <p class="text-lg font-bold text-[#5e5048]">125</p>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow text-center">
+        <h3 class="font-semibold text-[#6b4f3b] mb-2">Books Added Today</h3>
+        <p class="text-lg font-bold text-[#5e5048]">3</p>
+      </div>
+
+    </div>
+
+    <div class="grid gap-10 md:grid-cols-2">
+
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="font-semibold mb-4 text-[#6b4f3b]">Books Per Genre</h3>
+        <div class="mb-3">
+          <span>Thriller (5)</span>
+          <div class="w-full bg-[#d9cbb6] h-5 rounded mt-1">
+            <div class="bg-[#6b4f3b] h-5 rounded" style="width: 100%"></div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <span>Romance (5)</span>
+          <div class="w-full bg-[#d9cbb6] h-5 rounded mt-1">
+            <div class="bg-[#6b4f3b] h-5 rounded" style="width: 100%"></div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <span>Self-Help (5)</span>
+          <div class="w-full bg-[#d9cbb6] h-5 rounded mt-1">
+            <div class="bg-[#6b4f3b] h-5 rounded" style="width: 100%"></div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <span>Fantasy (5)</span>
+          <div class="w-full bg-[#d9cbb6] h-5 rounded mt-1">
+            <div class="bg-[#6b4f3b] h-5 rounded" style="width: 100%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="font-semibold mb-4 text-[#6b4f3b]">Most Preferred Genre</h3>
+        <div class="mb-3">
+          <span>Thriller</span>
+          <div class="w-full bg-[#d9cbb6] h-5 rounded mt-1">
+            <div class="bg-[#6b4f3b] h-5 rounded" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <span>Romance</span>
+          <div class="w-full bg-[#d9cbb6] h-5 rounded mt-1">
+            <div class="bg-[#6b4f3b] h-5 rounded" style="width: 60%"></div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <span>Self-Help</span>
+          <div class="w-full bg-[#d9cbb6] h-5 rounded mt-1">
+            <div class="bg-[#6b4f3b] h-5 rounded" style="width: 40%"></div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <span>Fantasy</span>
+          <div class="w-full bg-[#d9cbb6] h-5 rounded mt-1">
+            <div class="bg-[#6b4f3b] h-5 rounded" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
