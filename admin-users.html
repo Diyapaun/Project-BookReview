@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,30 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#e0cfb4] flex flex-col min-h-screen">
+
+<body class="bg-[#e0cfb4] flex flex-col min-h-screen" style="padding-top:120px;">
 
   <nav class="navbar">
-        <div class="navbar-left">
-            <img src="p-removebg-preview.png" alt="Logo" class="img">
-            <span class="logo">InkTrail Admin</span>
-        </div>
-        <ul>
-            <li><a href="admin-dashboard.html">Dashboard</a></li>
-            <li><a href="admin-books.html">Books</a></li>
-            <li><a href="admin-reviews.html">Reviews</a></li>
-            <li><a href="admin-users.html">Users</a></li>
-            <li><a href="admin-settings.html">Settings</a></li>
-        </ul>
-    </nav>
+    <div class="navbar-left">
+      <img src="p-removebg-preview.png" alt="Logo" class="img">
+      <span class="logo">InkTrail Admin</span>
+    </div>
+    <ul>
+      <li><a href="admin-login.html">Home</a></li>
 
+      <li><a href="admin-dashboard.html">Dashboard</a></li>
+      <li><a href="admin-books.html">Books</a></li>
+      <li><a href="admin-reviews.html">Reviews</a></li>
+      <li><a href="admin-users.html">Users</a></li>
+      <li><a href="admin-settings.html">Settings</a></li>
+    </ul>
+  </nav>
+  <br>
 
-  <main class="pt-24 px-8 flex-1">
-    <h1 class="text-3xl font-bold text-[#6b4f3b] mb-6">Manage Users</h1>
-    <table class="w-full bg-white shadow-md rounded">
+  <main class="px-8 flex-1" style="padding-top:140px;">
+
+<h1 class="text-3xl font-bold text-[#6b4f3b] mb-6 text-center">Users</h1>
+  <table class="w-full bg-white shadow-md rounded">
       <thead class="bg-[#6b4f3b] text-white">
         <tr>
           <th class="py-3 px-4 text-left">User ID</th>
@@ -60,4 +65,5 @@
   </footer>
 
 </body>
+
 </html>

@@ -3,14 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Georgia', serif;
- }
-
-body{
-  height: 100%;
-  background-color:#e0cfb4
 }
 
-.main{
+body {
+  height: 100%;
+  background-color: #e0cfb4
+}
+
+.main {
   background: url('book.jpg') no-repeat center center/cover;
   height: 100vh;
   display: flex;
@@ -18,12 +18,14 @@ body{
   align-items: center;
   text-align: center;
 }
-.main1{
-    display: none;
+
+.main1 {
+  display: none;
 }
+
 h1 {
   font-size: 50px;
-  color:#6b4f3b;
+  color: #6b4f3b;
   margin-bottom: 15px;
 }
 
@@ -63,13 +65,18 @@ p {
   z-index: 10;
 }
 
+input.error {
+  border: 2px solid red !important;
+}
+
 .logo {
   font-size: 24px;
   font-weight: bold;
 }
-.img{
-    height:50px;
-    width:60px;
+
+.img {
+  height: 50px;
+  width: 60px;
 }
 
 .navbar ul {
@@ -88,13 +95,15 @@ p {
 .navbar a:hover {
   color: #e2d2c2;
 }
+
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 10px; }
+  gap: 10px;
+}
 
 
-footer{
+footer {
   background-color: #6b4f3b;
   color: white;
   text-align: center;
@@ -104,7 +113,8 @@ footer{
   width: 100%;
   font-size: 18px;
 }
-input{
+
+input {
   background-color: #e2d2c7;
 }
 
@@ -126,7 +136,9 @@ input{
   margin-top: 250px;
   width: 100%;
 }
-
+.genres-page {
+  padding-bottom: 90px;
+}
 .card img {
   width: 100%;
   height: 180px;
@@ -141,94 +153,103 @@ input{
   font-size: 1.2rem;
   font-weight: bold;
 }
-.p1{
+
+.p1 {
   text-align: center;
   font-size: 30px;
   color: #5e5048;
   margin-top: 150px;
-  margin-bottom:0px;
+  margin-bottom: 0px;
   font-weight: bold;
 }
-label{
+
+label {
   color: black;
 }
+
 admin-content {
-    padding: 100px 20px 80px;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 100px 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .admin-content h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 40px;
-    color: #523e2f;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: #523e2f;
 }
 
 .reviews-table-container {
-    overflow-x: auto;
-    background-color: #fff8f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  background-color: #fff8f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .reviews-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
 }
 
-.reviews-table th, .reviews-table td {
-    padding: 15px;
-    border-bottom: 1px solid #dcd0c0;
+.reviews-table th,
+.reviews-table td {
+  padding: 15px;
+  border-bottom: 1px solid #dcd0c0;
 }
 
 .reviews-table th {
-    background-color: #6b4f3b;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    position: sticky;
-    top: 0;
+  background-color: #6b4f3b;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
 }
 
 .reviews-table td {
-    color: #5e5048;
-    font-size: 16px;
+  color: #5e5048;
+  font-size: 16px;
 }
 
 .reviews-table tr:hover {
-    background-color: #f7ede3;
+  background-color: #f7ede3;
 }
 
 .review-text {
-    max-width: 400px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .actions a {
-    margin-right: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    text-decoration: none;
-    font-weight: bold;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .action-edit {
-    background-color: #e0cfb4;
-    color: #6b4f3b;
+  background-color: #e0cfb4;
+  color: #6b4f3b;
 }
 
 .action-delete {
-    background-color: #cc5252;
-    color: white;
+  background-color: #cc5252;
+  color: white;
 }
 
-.action-edit:hover { background-color: #d0c0a6; }
-.action-delete:hover { background-color: #a84242; }
+.action-edit:hover {
+  background-color: #d0c0a6;
+}
+
+.action-delete:hover {
+  background-color: #a84242;
+}
 
 
 @media (max-width: 768px) {
@@ -236,39 +257,61 @@ admin-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
   .cards-container .card:nth-child(5) {
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1;
   }
-    .navbar {
-        padding: 15px 20px;
-    }
-    .navbar ul {
-        display: none;
-    }
-    .admin-content {
-        padding: 80px 10px 60px;
-    }
-    .admin-content h1 {
-        font-size: 30px;
-    }
-    .reviews-table th, .reviews-table td {
-        padding: 10px;
-        font-size: 14px;
-    }
-    
+
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+   .p1 {
+    margin-top: 250px;
 }
 
+.h2{
+   margin-top: 300px;
+}
+
+.admin-content {
+  padding: 80px 10px 60px;
+}
+
+.admin-content h1 {
+  font-size: 30px;
+}
+
+.reviews-table th,
+.reviews-table td {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.admin-content {
+ margin-top: 200px;
+}
+}
 @media (max-width: 480px) {
   .cards-container {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
+
   .card {
     width: 90%;
   }
 }
 
 @media (max-width: 600px) {
-    .navbar ul {
+  .navbar ul {
     flex-direction: column;
     gap: 10px;
   }
@@ -285,6 +328,7 @@ admin-content {
   .content p {
     font-size: 16px;
   }
+
   .cards-container {
     flex-direction: column;
     align-items: center;
@@ -294,11 +338,15 @@ admin-content {
   .card {
     width: 80%;
   }
+
+   .p1 {
+    margin-top: 180px;
+  }
 }
 
 
 @media (max-width: 1024px) {
-    .review-text {
-        max-width: 250px;
-    }
+  .review-text {
+    max-width: 250px;
+  }
 }

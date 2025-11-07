@@ -29,22 +29,24 @@
     <h1>Admin Login</h1>
     <p>Access your dashboard securely.</p>
 
-    <form id="adminLoginForm" class="flex flex-col items-center gap-4 w-full max-w-sm">
+  <form id="loginForm" class="flex flex-col items-center gap-4 w-full max-w-sm" onSubmit="return validate(this);" name="form">
 
       <div class="w-full flex flex-col">
-        <label for="adminEmail" class="text-white text-lg mb-1" style="font-size: 20px;">Email</label><br>
-        <input type="text" id="adminEmail" placeholder="admin@example.com" 
-               class="p-2 rounded text-black w-full text-base" style="font-size: 20px;">
+        <label for="Email" class="text-white text-lg mb-1" style="font-size: 20px;">Email</label><br>
+        <input type="text" id="Email" placeholder="admin@example.com" 
+               class="p-2 rounded text-black w-full text-base" style="font-size: 20px;"name="email">
       </div>
 
       <div class="w-full flex flex-col">
-        <label for="adminPassword" class="text-white text-lg mb-1" style="font-size: 20px;">Password</label><br>
-        <input type="password" id="adminPassword" placeholder="Minimum 8 characters" 
-               class="p-2 rounded text-black w-full text-base" style="font-size: 20px;">
+        <label for="Password" class="text-white text-lg mb-1" style="font-size: 20px;">Password</label><br>
+        <input type="password" id="Password" placeholder="Minimum 8 characters" 
+               class="p-2 rounded text-black w-full text-base" style="font-size: 20px;" name="password">
       </div>
 <br>
-      <button type="submit" class="btn mt-3 w-full" style="border: none;">Login</button>
+      <button type="submit" class="btn mt-3 w-full" style="border: none;" onclick="join()">Login</button>
     </form>
+<br>
+<a href="admin-login.html" style="color:#6b4f3b; font-size:16px; text-align:center; display:block; font-style:italic; text-decoration:underline;">Are you a client?</a>
 
   </div>
 </div>
@@ -54,47 +56,61 @@
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.getElementById('adminLoginForm');
+var ck_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; 
+var ck_username = /^[A-Za-z0-9_]{3,20}$/;
+var ck_password =  /^[A-Za-z0-9!@#$%^&*()_]{8,20}$/;
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); 
+function validate(form){
+  var email = form.email.value;
 
-    const emailInput = document.getElementById('adminEmail'); 
-    const passwordInput = document.getElementById('adminPassword'); 
+  var password = form.password.value;
 
-    const email = emailInput.value.trim();
-    const password = passwordInput.value;
+  var errors = []; 
 
-    if (email === "") {
-      alert("Email is required. Please fill out this field.");
-      emailInput.focus();
-      return false;
-    }
+  form.email.classList.remove("error");
+  form.password.classList.remove("error");
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
-    if (!emailPattern.test(email)) {
-      alert("Please enter a valid email address (e.g., admin@example.com).");
-      emailInput.focus();
-      return false;
-    }
+  if (!ck_email.test(email)) {
+    errors.push("You must enter a valid email address.");
+    form.email.classList.add("error");
+  }
 
-    if (password === "") {
-      alert("Password is required. Please fill out this field.");
-      passwordInput.focus();
-      return false;
-    }
 
-    if (password.length < 8) {
-      alert("Your password must be at least 8 characters long for security.");
-      passwordInput.focus();
-      return false;
-    }
+  if (!ck_password.test(password)) {
+    errors.push("You must enter a valid Password with min 8 char.");
+    form.password.classList.add("error");
+  }
 
-    // Redirect to admin dashboard after successful validation
-    window.location.href = "admin-dashboard.html";
-  });
+  if (errors.length > 0) {
+  reportErrors(errors);
+  return false;
+} else {
+  window.location.href = "admin-dashboard.html";
+  return false; 
+}
+}
+
+
+function reportErrors(errors){
+ var msg = "Please Enter Valide Data...\n";
+ for (var i = 0; i<errors.length; i++) {
+  var numError = i + 1;
+  msg += "\n" + numError + ". " + errors[i];
+ }
+ alert(msg);
+}
+document.getElementById("Email").addEventListener("input", function(){
+  if(ck_email.test(this.value)) this.classList.remove("error");
 });
+
+document.getElementById("Password").addEventListener("input", function(){
+  if(ck_password.test(this.value)) this.classList.remove("error");
+});
+
+function join(){
+  window.location.href = "admin-dashboard.html";
+}
+
 </script>
 
 </body>
